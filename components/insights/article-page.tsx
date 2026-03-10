@@ -61,6 +61,32 @@ export function ArticlePage({ article }: { article: InsightArticle }) {
                   ))}
                 </ul>
               ) : null}
+              {section.table ? (
+                <div className="overflow-hidden rounded-sm border border-stone">
+                  <table className="w-full border-collapse text-left text-sm">
+                    <thead className="bg-cloud">
+                      <tr>
+                        {section.table.headers.map((header) => (
+                          <th key={header} className="border-b border-stone px-4 py-3 font-semibold text-ink">
+                            {header}
+                          </th>
+                        ))}
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {section.table.rows.map((row) => (
+                        <tr key={row.join('-')}>
+                          {row.map((cell) => (
+                            <td key={cell} className="border-b border-stone px-4 py-3 align-top text-ink/80">
+                              {cell}
+                            </td>
+                          ))}
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              ) : null}
             </div>
           ))}
 
