@@ -4,22 +4,25 @@ import Link from 'next/link';
 import { ChevronDown, Menu, X } from 'lucide-react';
 import { useEffect, useState } from 'react';
 
+type DesktopMenu = 'solutions' | 'company' | null;
+
 const solutionLinks = [
   { label: 'Loan Programs', href: '/#loan-programs' },
-  { label: 'Loan Acquisitions', href: '/loan-acquisitions' }
+  { label: 'Loan Acquisitions', href: '/loan-acquisitions' },
+  { label: 'For Brokers & Partners', href: '/for-brokers-partners' }
 ] as const;
 
 const companyLinks = [
   { label: 'Why Us', href: '/#why-us' },
   { label: 'How It Works', href: '/loan-process' },
   { label: 'FAQ', href: '/#faq' },
-  { label: 'Insights', href: '/insights' },
-  { label: 'For Brokers & Partners', href: '/for-brokers-partners' }
+  { label: 'Insights', href: '/insights' }
 ] as const;
 
 export function SiteHeader() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [desktopOpenMenu, setDesktopOpenMenu] = useState<DesktopMenu>(null);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 14);
@@ -39,52 +42,82 @@ export function SiteHeader() {
           NORTHLINE CAPITAL
         </Link>
 
-        <nav className="hidden items-center gap-6 lg:flex">
-          <div className="group relative">
+        <nav className="hidden items-center gap-6 lg:flex" aria-label="Primary">
+          <div
+            className="relative"
+            onMouseEnter={() => setDesktopOpenMenu('solutions')}
+            onMouseLeave={() => setDesktopOpenMenu((menu) => (menu === 'solutions' ? null : menu))}
+          >
             <button
               type="button"
-              className="inline-flex items-center gap-1 text-sm text-ink/80 transition hover:text-ink"
+              className="inline-flex items-center gap-1 text-sm text-ink/80 transition hover:text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-navy/40"
               aria-label="Solutions"
+              aria-haspopup="menu"
+              aria-expanded={desktopOpenMenu === 'solutions'}
+              onFocus={() => setDesktopOpenMenu('solutions')}
+              onKeyDown={(event) => {
+                if (event.key === 'Escape') setDesktopOpenMenu(null);
+              }}
             >
               Solutions
               <ChevronDown className="h-4 w-4" />
             </button>
-            <div className="invisible absolute left-0 top-full mt-3 w-56 rounded-sm border border-stone bg-white p-2 opacity-0 shadow-soft transition group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
-              {solutionLinks.map((item) => (
-                <Link
-                  key={item.label}
-                  href={item.href}
-                  className="block rounded-sm px-3 py-2 text-sm text-ink/80 transition hover:bg-cloud hover:text-ink"
-                >
-                  {item.label}
-                </Link>
-              ))}
+            <div
+              className={`absolute left-0 top-full w-56 pt-2 ${desktopOpenMenu === 'solutions' ? 'visible opacity-100' : 'invisible opacity-0'} transition`}
+              onFocusCapture={() => setDesktopOpenMenu('solutions')}
+            >
+              <div className="rounded-sm border border-stone bg-white p-2 shadow-soft">
+                {solutionLinks.map((item) => (
+                  <Link
+                    key={item.label}
+                    href={item.href}
+                    className="block rounded-sm px-3 py-2 text-sm text-ink/80 transition hover:bg-cloud hover:text-ink focus-visible:bg-cloud focus-visible:outline-none"
+                  >
+                    {item.label}
+                  </Link>
+                ))}
+              </div>
             </div>
           </div>
 
-          <div className="group relative">
+          <div
+            className="relative"
+            onMouseEnter={() => setDesktopOpenMenu('company')}
+            onMouseLeave={() => setDesktopOpenMenu((menu) => (menu === 'company' ? null : menu))}
+          >
             <button
               type="button"
-              className="inline-flex items-center gap-1 text-sm text-ink/80 transition hover:text-ink"
+              className="inline-flex items-center gap-1 text-sm text-ink/80 transition hover:text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-navy/40"
               aria-label="Company"
+              aria-haspopup="menu"
+              aria-expanded={desktopOpenMenu === 'company'}
+              onFocus={() => setDesktopOpenMenu('company')}
+              onKeyDown={(event) => {
+                if (event.key === 'Escape') setDesktopOpenMenu(null);
+              }}
             >
               Company
               <ChevronDown className="h-4 w-4" />
             </button>
-            <div className="invisible absolute left-0 top-full mt-3 w-56 rounded-sm border border-stone bg-white p-2 opacity-0 shadow-soft transition group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
-              {companyLinks.map((item) => (
-                <Link
-                  key={item.label}
-                  href={item.href}
-                  className="block rounded-sm px-3 py-2 text-sm text-ink/80 transition hover:bg-cloud hover:text-ink"
-                >
-                  {item.label}
-                </Link>
-              ))}
+            <div
+              className={`absolute left-0 top-full w-56 pt-2 ${desktopOpenMenu === 'company' ? 'visible opacity-100' : 'invisible opacity-0'} transition`}
+              onFocusCapture={() => setDesktopOpenMenu('company')}
+            >
+              <div className="rounded-sm border border-stone bg-white p-2 shadow-soft">
+                {companyLinks.map((item) => (
+                  <Link
+                    key={item.label}
+                    href={item.href}
+                    className="block rounded-sm px-3 py-2 text-sm text-ink/80 transition hover:bg-cloud hover:text-ink focus-visible:bg-cloud focus-visible:outline-none"
+                  >
+                    {item.label}
+                  </Link>
+                ))}
+              </div>
             </div>
           </div>
 
-          <Link href="/contact" className="text-sm text-ink/80 transition hover:text-ink">
+          <Link href="/contact" className="text-sm text-ink/80 transition hover:text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-navy/40">
             Contact
           </Link>
         </nav>
