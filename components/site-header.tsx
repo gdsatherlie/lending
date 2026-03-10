@@ -34,7 +34,7 @@ export function SiteHeader() {
             </Link>
           ))}
         </nav>
-        <Link href="#contact" className="rounded-sm border border-navy bg-navy px-5 py-2.5 text-sm font-medium text-cloud transition hover:bg-ink">
+        <Link href="/loan-process" className="rounded-sm border border-navy bg-navy px-5 py-2.5 text-sm font-medium text-cloud transition hover:bg-ink">
           Get Terms
         </Link>
       </div>

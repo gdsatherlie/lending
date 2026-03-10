@@ -270,7 +270,7 @@ export default function Home() {
             {/* Swap contact placeholders with real channels */}
             <p className="mt-4 text-sm text-cloud/75">(000) 000-0000 • originations@northlinecapital.com</p>
           </div>
-          <Link href="#" className="rounded-sm border border-cloud bg-cloud px-7 py-3 text-sm font-semibold text-navy transition hover:bg-white">Get Terms</Link>
+          <Link href="/loan-process" className="rounded-sm border border-cloud bg-cloud px-7 py-3 text-sm font-semibold text-navy transition hover:bg-white">Get Terms</Link>
         </div>
       </section>
 
