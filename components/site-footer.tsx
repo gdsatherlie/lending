@@ -1,5 +1,20 @@
 import Link from 'next/link';
 
+const navLinks = [
+  { label: 'Home', href: '/' },
+  { label: 'Loan Programs', href: '/#loan-programs' },
+  { label: 'Bridge Loans', href: '/loan-programs/bridge-loans' },
+  { label: 'Fix & Flip', href: '/loan-programs/fix-flip' },
+  { label: 'Rental / DSCR', href: '/loan-programs/rental-dscr' },
+  { label: 'Short-Term Rental', href: '/loan-programs/short-term-rental-loans' },
+  { label: 'Ground-Up Construction', href: '/loan-programs/construction' },
+  { label: 'Multifamily & Mixed-Use', href: '/loan-programs/multifamily' },
+  { label: 'Loan Process', href: '/loan-process' },
+  { label: 'Submit Your Deal', href: '/loan-process' },
+  { label: 'Insights', href: '/insights' },
+  { label: 'Contact', href: '/#contact' }
+] as const;
+
 export function SiteFooter() {
   return (
     <footer id="contact" className="border-t border-stone bg-cloud py-12">
@@ -10,20 +25,29 @@ export function SiteFooter() {
         </div>
         <div className="text-sm text-ink/75">
           <p className="font-semibold text-ink">Navigation</p>
-          <p className="mt-2">
-            Loan Programs • How It Works •{' '}
-            <Link href="/insights" className="text-navy underline underline-offset-4">
-              Insights
-            </Link>{' '}
-            • FAQ • Contact
-          </p>
+          <ul className="mt-2 grid gap-x-5 gap-y-1 sm:grid-cols-2">
+            {navLinks.map((item) => (
+              <li key={item.label}>
+                <Link href={item.href} className="underline-offset-4 hover:text-navy hover:underline">
+                  {item.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
         </div>
         <div className="text-sm text-ink/75">
           <p className="font-semibold text-ink">Legal</p>
-          <p className="mt-2">Privacy Policy (placeholder) • Terms (placeholder)</p>
+          <p className="mt-2 flex flex-col gap-1">
+            <Link href="/privacy-policy" className="underline-offset-4 hover:text-navy hover:underline">
+              Privacy Policy
+            </Link>
+            <Link href="/terms-of-use" className="underline-offset-4 hover:text-navy hover:underline">
+              Terms of Use
+            </Link>
+          </p>
         </div>
       </div>
-      <div className="section-shell mt-8 border-t border-stone pt-5 text-xs leading-relaxed text-ink/60 space-y-3">
+      <div className="section-shell mt-8 space-y-3 border-t border-stone pt-5 text-xs leading-relaxed text-ink/60">
         <p>
           Northline Capital provides business-purpose loans secured by real estate. Loans are intended for investment
           or commercial purposes only and are not available for consumer purposes or owner-occupied primary
@@ -45,7 +69,10 @@ export function SiteFooter() {
           Northline Capital originates loans in select U.S. markets and evaluates each transaction based on applicable
           legal, regulatory, licensing, and underwriting considerations.
         </p>
-        <p>Northline Capital reserves the right to modify, decline, or restructure any proposed financing at its sole discretion.</p>
+        <p>
+          Northline Capital reserves the right to modify, decline, or restructure any proposed financing at its sole
+          discretion.
+        </p>
         <p>Northline Capital does not provide consumer mortgage loans.</p>
       </div>
     </footer>
