@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { SiteHeader } from '@/components/site-header';
 import { SiteFooter } from '@/components/site-footer';
+import { QuickDealSnapshotForm } from '@/components/forms/quick-deal-snapshot-form';
 
 const brokerBenefits = [
   {
@@ -90,6 +91,20 @@ export default function BrokersPartnersPage() {
             ))}
           </ul>
         </article>
+      </section>
+
+
+      <section className="section-shell pb-10">
+        <div className="rounded-sm border border-stone bg-white p-8 shadow-soft">
+          <h2 className="text-2xl font-semibold text-navy">Quick Deal Snapshot</h2>
+          <p className="mt-4 max-w-4xl text-sm leading-relaxed text-ink/75">
+            Brokers are welcome to submit a quick deal summary for initial feedback. If the opportunity fits our
+            lending parameters, our team will follow up to request additional information.
+          </p>
+          <div className="mt-6">
+            <QuickDealSnapshotForm />
+          </div>
+        </div>
       </section>
 
       <section className="section-shell pb-24">
