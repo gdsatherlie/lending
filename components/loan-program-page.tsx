@@ -13,9 +13,21 @@ type LoanProgramPageProps = {
   parameters: LoanParameter[];
   propertyTypes: string[];
   useCases: string[];
+  ctaHeadline?: string;
+  underwritingIntro?: string;
+  underwritingFactors?: string[];
 };
 
-export function LoanProgramPage({ title, overview, parameters, propertyTypes, useCases }: LoanProgramPageProps) {
+export function LoanProgramPage({
+  title,
+  overview,
+  parameters,
+  propertyTypes,
+  useCases,
+  ctaHeadline,
+  underwritingIntro,
+  underwritingFactors
+}: LoanProgramPageProps) {
   return (
     <main>
       <SiteHeader />
@@ -74,9 +86,26 @@ export function LoanProgramPage({ title, overview, parameters, propertyTypes, us
         </article>
       </section>
 
+      {underwritingIntro && underwritingFactors ? (
+        <section className="bg-white py-16">
+          <div className="section-shell">
+            <article className="rounded-sm border border-stone bg-cloud p-7">
+              <h2 className="text-2xl font-semibold text-navy">Underwriting Approach</h2>
+              <p className="mt-4 max-w-3xl text-sm leading-relaxed text-ink/75">{underwritingIntro}</p>
+              <p className="mt-5 text-sm font-medium text-ink/85">Key factors include:</p>
+              <ul className="mt-3 list-disc space-y-2 pl-5 text-sm text-ink/80">
+                {underwritingFactors.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            </article>
+          </div>
+        </section>
+      ) : null}
+
       <section className="bg-navy py-16 text-cloud">
         <div className="section-shell text-center">
-          <h2 className="text-3xl font-semibold">Ready to discuss a {title.toLowerCase()} scenario?</h2>
+          <h2 className="text-3xl font-semibold">{ctaHeadline ?? `Ready to discuss a ${title.toLowerCase()} scenario?`}</h2>
           <p className="mx-auto mt-4 max-w-2xl text-sm text-cloud/80">Business-purpose loans only. Terms are subject to underwriting and final documentation.</p>
           <Link
             href="#contact"

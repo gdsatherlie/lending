@@ -28,6 +28,11 @@ const programs = [
     title: 'Multifamily & Mixed-Use',
     description: 'Small-balance and mid-market solutions for income-producing business assets.',
     href: '/loan-programs/multifamily'
+  },
+  {
+    title: 'Short-Term Rental Loans',
+    description: 'Flexible Airbnb and vacation rental financing for stabilized STR assets and experienced operators.',
+    href: '/loan-programs/short-term-rental-loans'
   }
 ] as const;
 
