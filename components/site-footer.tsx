@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 export function SiteFooter() {
   return (
     <footer id="contact" className="border-t border-stone bg-cloud py-12">
@@ -8,7 +10,7 @@ export function SiteFooter() {
         </div>
         <div className="text-sm text-ink/75">
           <p className="font-semibold text-ink">Navigation</p>
-          <p className="mt-2">Loan Programs • How It Works • FAQ • Contact</p>
+          <p className="mt-2">Loan Programs • How It Works • <Link href="/insights" className="text-navy underline underline-offset-4">Insights</Link> • FAQ • Contact</p>
         </div>
         <div className="text-sm text-ink/75">
           <p className="font-semibold text-ink">Legal</p>

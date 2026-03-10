@@ -51,6 +51,25 @@ const trustItems: { label: string; Icon: LucideIcon }[] = [
   { label: 'Direct access to decision makers', Icon: ArrowUpRight }
 ];
 
+
+const featuredInsights = [
+  {
+    title: 'How Bridge Loans Work for Real Estate Investors',
+    href: '/insights/how-bridge-loans-work',
+    category: 'Bridge Lending'
+  },
+  {
+    title: 'What Is a DSCR Loan?',
+    href: '/insights/what-is-a-dscr-loan',
+    category: 'DSCR'
+  },
+  {
+    title: 'How Airbnb Financing Works for Short-Term Rental Investors',
+    href: '/insights/how-airbnb-financing-works',
+    category: 'STR Financing'
+  }
+] as const;
+
 const faqs = [
   ['Do you lend on owner-occupied properties?', 'No. We provide business-purpose lending only and do not finance owner-occupied consumer residences.'],
   ['What property types do you finance?', 'We focus on investment real estate including 1-4 unit non-owner occupied, multifamily, mixed-use, and select commercial collateral.'],
@@ -207,6 +226,26 @@ export default function Home() {
               <blockquote key={quote} className="rounded-sm border border-stone p-6 text-sm leading-relaxed text-ink/80">{quote}</blockquote>
             ))}
           </div>
+        </div>
+      </section>
+
+
+      <section className="section-shell py-24">
+        <div className="mb-8 flex items-end justify-between gap-4">
+          <div>
+            <p className="eyebrow">Insights</p>
+            <h2 className="mt-3 text-3xl font-semibold text-navy sm:text-4xl">Lending education for active operators.</h2>
+          </div>
+          <Link href="/insights" className="hidden text-sm font-medium text-navy underline underline-offset-4 md:inline">View all insights</Link>
+        </div>
+        <div className="grid gap-5 md:grid-cols-3">
+          {featuredInsights.map((article) => (
+            <article key={article.href} className="rounded-sm border border-stone bg-white p-6 shadow-soft">
+              <p className="eyebrow">{article.category}</p>
+              <h3 className="mt-3 text-xl font-semibold text-navy">{article.title}</h3>
+              <Link href={article.href} className="mt-5 inline-flex text-sm font-medium text-ink">Read Article</Link>
+            </article>
+          ))}
         </div>
       </section>
 
