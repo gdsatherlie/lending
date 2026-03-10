@@ -4,11 +4,31 @@ import { ArrowUpRight, Clock3, Landmark, ShieldCheck, type LucideIcon } from 'lu
 import { SiteHeader } from '@/components/site-header';
 
 const programs = [
-  ['Bridge Loans', 'Acquisition and recapitalization debt structured for transitional business-purpose assets.'],
-  ['Fix & Flip', 'Fast draws and practical terms for renovation operators scaling repeat projects.'],
-  ['Rental / DSCR', 'Stabilized and light-value-add rental financing for portfolio-minded investors.'],
-  ['Ground-Up Construction', 'Construction capital designed for disciplined sponsors and clear exit plans.'],
-  ['Multifamily & Mixed-Use', 'Small-balance and mid-market solutions for income-producing business assets.']
+  {
+    title: 'Bridge Loans',
+    description: 'Acquisition and recapitalization debt structured for transitional business-purpose assets.',
+    href: '/loan-programs/bridge-loans'
+  },
+  {
+    title: 'Fix & Flip',
+    description: 'Fast draws and practical terms for renovation operators scaling repeat projects.',
+    href: '/loan-programs/fix-flip'
+  },
+  {
+    title: 'Rental / DSCR',
+    description: 'Stabilized and light-value-add rental financing for portfolio-minded investors.',
+    href: '/loan-programs/rental-dscr'
+  },
+  {
+    title: 'Ground-Up Construction',
+    description: 'Construction capital designed for disciplined sponsors and clear exit plans.',
+    href: '/loan-programs/construction'
+  },
+  {
+    title: 'Multifamily & Mixed-Use',
+    description: 'Small-balance and mid-market solutions for income-producing business assets.',
+    href: '/loan-programs/multifamily'
+  }
 ] as const;
 
 const deals = [
@@ -83,13 +103,13 @@ export default function Home() {
           <p className="max-w-md text-sm leading-relaxed text-ink/70">Structured terms, clear expectations, and program flexibility informed by real project economics.</p>
         </div>
         <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-          {programs.map(([title, description]) => (
+          {programs.map(({ title, description, href }) => (
             <article key={title} className="group flex min-h-48 flex-col justify-between rounded-sm border border-stone bg-white p-6 shadow-soft transition hover:-translate-y-1">
               <div>
                 <h3 className="text-xl font-semibold text-navy">{title}</h3>
                 <p className="mt-3 text-sm leading-relaxed text-ink/75">{description}</p>
               </div>
-              <p className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-ink">Program Details <ArrowUpRight className="h-4 w-4 transition group-hover:translate-x-0.5" /></p>
+              <Link href={href} className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-ink">Program Details <ArrowUpRight className="h-4 w-4 transition group-hover:translate-x-0.5" /></Link>
             </article>
           ))}
         </div>
