@@ -5,6 +5,7 @@ const navLinks = [
   { label: 'Why Us', href: '/#why-us' },
   { label: 'How It Works', href: '/loan-process' },
   { label: 'FAQ', href: '/#faq' },
+  { label: 'Loan Acquisitions', href: '/loan-acquisitions' },
   { label: 'Insights', href: '/insights' },
   { label: 'Contact', href: '/#contact' }
 ] as const;

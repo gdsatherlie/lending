@@ -230,6 +230,22 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="section-shell pb-24">
+        <article className="rounded-sm border border-stone bg-white p-8 shadow-soft">
+          <p className="eyebrow">Additional Credit Solutions</p>
+          <h2 className="mt-3 text-3xl font-semibold text-navy sm:text-4xl">Loan Acquisitions</h2>
+          <p className="mt-4 max-w-3xl text-sm leading-relaxed text-ink/75">
+            In addition to originating business-purpose real estate loans, Northline Capital selectively acquires loans,
+            notes, and small portfolios from lenders and investors seeking liquidity.
+          </p>
+          <Link
+            href="/loan-acquisitions"
+            className="mt-6 inline-flex rounded-sm border border-navy bg-navy px-6 py-3 text-sm font-semibold text-cloud transition hover:bg-ink"
+          >
+            Loan Acquisitions
+          </Link>
+        </article>
+      </section>
 
       <section className="section-shell py-24">
         <div className="mb-8 flex items-end justify-between gap-4">
