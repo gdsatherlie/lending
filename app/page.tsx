@@ -71,6 +71,29 @@ const featuredInsights = [
   }
 ] as const;
 
+
+const audienceRoutes = [
+  {
+    title: 'Borrowers',
+    description:
+      'Seeking financing for an investment property, transitional asset, or business-purpose real estate opportunity.',
+    cta: 'Submit Your Deal',
+    href: '/loan-process'
+  },
+  {
+    title: 'Brokers & Partners',
+    description: 'Looking for a lending partner for your client, transaction, or ongoing deal flow.',
+    cta: 'For Brokers & Partners',
+    href: '/for-brokers-partners'
+  },
+  {
+    title: 'Loan Sellers',
+    description: 'Evaluating the sale of a loan, note, participation interest, or small portfolio.',
+    cta: 'Loan Acquisitions',
+    href: '/loan-acquisitions'
+  }
+] as const;
+
 const faqs = [
   ['Do you lend on owner-occupied properties?', 'No. We provide business-purpose lending only and do not finance owner-occupied consumer residences.'],
   ['What property types do you finance?', 'We focus on investment real estate including 1-4 unit non-owner occupied, multifamily, mixed-use, and select commercial collateral.'],
@@ -115,6 +138,31 @@ export default function Home() {
         <div className="section-shell grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
           {['Business-purpose only', 'Direct communication', 'Transparent process', 'Execution-focused underwriting', 'Built for repeat borrowers'].map((item) => (
             <p key={item} className="rounded-sm border border-stone/80 px-4 py-3 text-center text-sm font-medium text-ink/75">{item}</p>
+          ))}
+        </div>
+      </section>
+
+      <section className="section-shell py-24">
+        <div className="mb-10 max-w-3xl space-y-3">
+          <p className="eyebrow">Work With Northline</p>
+          <h2 className="text-3xl font-semibold text-navy sm:text-4xl">How Can We Help?</h2>
+          <p className="text-sm leading-relaxed text-ink/75">
+            Northline Capital works with borrowers, brokers, and counterparties across a range of business-purpose real
+            estate credit opportunities.
+          </p>
+        </div>
+        <div className="grid gap-5 md:grid-cols-3">
+          {audienceRoutes.map(({ title, description, cta, href }) => (
+            <article key={title} className="rounded-sm border border-stone bg-white p-6 shadow-soft">
+              <h3 className="text-2xl font-semibold text-navy">{title}</h3>
+              <p className="mt-3 min-h-20 text-sm leading-relaxed text-ink/75">{description}</p>
+              <Link
+                href={href}
+                className="mt-6 inline-flex rounded-sm border border-navy bg-navy px-6 py-3 text-sm font-semibold text-cloud transition hover:bg-ink"
+              >
+                {cta}
+              </Link>
+            </article>
           ))}
         </div>
       </section>
