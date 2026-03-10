@@ -24,10 +24,11 @@ const baseBorrowerRequirements = [
   'Owner-occupied primary residences are not eligible.',
   'Borrowers typically invest through legal entities such as LLCs or corporations.',
   'Borrowers must certify that loan proceeds will be used solely for business or investment purposes.',
-  'Borrowers must certify that the property is not intended for owner-occupied consumer use.',
+  'Borrowers must certify that the collateral property is not intended for owner-occupied consumer use.',
   'A clear exit strategy is required, typically through sale, refinance, or stabilization.',
   'Adequate liquidity, reserves, and project support may be required.',
-  'Additional underwriting conditions may apply based on property type, market, borrower profile, and business plan.'
+  'Additional underwriting conditions may apply based on property type, market, borrower profile, business plan, and sponsor experience.',
+  'Financing is subject to underwriting review and is not guaranteed unless and until final loan documents are executed and all closing conditions are satisfied.'
 ] as const;
 
 export function LoanProgramPage({
@@ -136,7 +137,7 @@ export function LoanProgramPage({
         <div className="section-shell text-center">
           <p className="mx-auto max-w-4xl text-xs leading-relaxed text-cloud/75">
             All loans are for business-purpose real estate transactions only, are subject to underwriting approval,
-            and are not available for consumer or owner-occupied primary residence purposes.
+            and are not available for consumer purposes or owner-occupied primary residence use.
           </p>
           <h2 className="mt-4 text-3xl font-semibold">{ctaHeadline ?? `Ready to discuss a ${title.toLowerCase()} scenario?`}</h2>
           <p className="mx-auto mt-4 max-w-2xl text-sm text-cloud/80">Business-purpose loans only. Terms are subject to underwriting and final documentation.</p>

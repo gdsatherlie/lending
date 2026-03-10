@@ -50,11 +50,12 @@ export default function ShortTermRentalLoansPage() {
         'Owner-occupied primary residences are not eligible.',
         'Borrowers typically invest through legal entities such as LLCs or corporations.',
         'Borrowers must certify that loan proceeds will be used solely for business or investment purposes.',
-        'Borrowers must certify that the property is not intended for owner-occupied consumer use.',
+        'Borrowers must certify that the collateral property is not intended for owner-occupied consumer use.',
         'Property cash flow support, market depth, and operator experience are evaluated for short-term rental financing.',
         'A clear exit strategy is required, typically through sale, refinance, or stabilization.',
         'Adequate liquidity, reserves, and project support may be required.',
-        'Additional underwriting conditions may apply based on property type, market, borrower profile, and business plan.'
+        'Additional underwriting conditions may apply based on property type, market, borrower profile, business plan, and sponsor experience.',
+        'Financing is subject to underwriting review and is not guaranteed unless and until final loan documents are executed and all closing conditions are satisfied.'
       ]}
       ctaHeadline="Submit Your Short-Term Rental Deal"
     />

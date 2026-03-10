@@ -45,6 +45,7 @@ export function SiteFooter() {
           Northline Capital originates loans in select U.S. markets and evaluates each transaction based on applicable
           legal, regulatory, licensing, and underwriting considerations.
         </p>
+        <p>Northline Capital reserves the right to modify, decline, or restructure any proposed financing at its sole discretion.</p>
         <p>Northline Capital does not provide consumer mortgage loans.</p>
       </div>
     </footer>
