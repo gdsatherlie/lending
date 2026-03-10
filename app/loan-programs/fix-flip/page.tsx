@@ -18,6 +18,17 @@ export default function FixFlipPage() {
       ]}
       propertyTypes={['Single-family homes', 'Townhomes', '2–4 unit residential', 'Small multifamily']}
       useCases={['Property renovation', 'Short-term repositioning', 'Value-add resale']}
+      borrowerRequirements={[
+        'Loans must be for business or investment purposes only.',
+        'Owner-occupied primary residences are not eligible.',
+        'Borrowers typically invest through legal entities such as LLCs or corporations.',
+        'Borrowers must certify that loan proceeds will be used solely for business or investment purposes.',
+        'Borrowers must certify that the property is not intended for owner-occupied consumer use.',
+        'Prior renovation execution experience and a realistic scope, timeline, and budget are preferred.',
+        'A clear exit strategy is required, typically through sale, refinance, or stabilization.',
+        'Adequate liquidity, reserves, and project support may be required.',
+        'Additional underwriting conditions may apply based on property type, market, borrower profile, and business plan.'
+      ]}
     />
   );
 }

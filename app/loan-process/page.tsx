@@ -44,6 +44,14 @@ export default function LoanProcessPage() {
             execution.
           </p>
           <p>Qualified loans can typically close within 10–14 business days.</p>
+          <p className="text-sm">
+            By submitting this inquiry, you acknowledge that you are seeking financing for a business-purpose or
+            investment real estate transaction, not consumer or owner-occupied residential financing.
+          </p>
+          <p className="text-sm">
+            Submission of a deal inquiry does not constitute approval, a commitment to lend, or an agreement to
+            provide financing.
+          </p>
         </div>
       </section>
 

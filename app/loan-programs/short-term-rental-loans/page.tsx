@@ -45,6 +45,17 @@ export default function ShortTermRentalLoansPage() {
         'Bridge financing prior to permanent financing',
         'Portfolio financing for short-term rental operators'
       ]}
+      borrowerRequirements={[
+        'Loans must be for business or investment purposes only.',
+        'Owner-occupied primary residences are not eligible.',
+        'Borrowers typically invest through legal entities such as LLCs or corporations.',
+        'Borrowers must certify that loan proceeds will be used solely for business or investment purposes.',
+        'Borrowers must certify that the property is not intended for owner-occupied consumer use.',
+        'Property cash flow support, market depth, and operator experience are evaluated for short-term rental financing.',
+        'A clear exit strategy is required, typically through sale, refinance, or stabilization.',
+        'Adequate liquidity, reserves, and project support may be required.',
+        'Additional underwriting conditions may apply based on property type, market, borrower profile, and business plan.'
+      ]}
       ctaHeadline="Submit Your Short-Term Rental Deal"
     />
   );

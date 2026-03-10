@@ -17,6 +17,17 @@ export default function ConstructionPage() {
       ]}
       propertyTypes={['Single-family development', 'Townhomes', 'Small multifamily', 'Build-to-rent projects']}
       useCases={['Ground-up residential development', 'Build-to-rent communities', 'Small multifamily construction']}
+      borrowerRequirements={[
+        'Loans must be for business or investment purposes only.',
+        'Owner-occupied primary residences are not eligible.',
+        'Borrowers typically invest through legal entities such as LLCs or corporations.',
+        'Borrowers must certify that loan proceeds will be used solely for business or investment purposes.',
+        'Borrowers must certify that the property is not intended for owner-occupied consumer use.',
+        'Sponsor and development experience, budget integrity, timeline realism, and draw compliance are central to construction underwriting.',
+        'A clear exit strategy is required, typically through sale, refinance, or stabilization.',
+        'Adequate liquidity, reserves, and project support may be required.',
+        'Additional underwriting conditions may apply based on property type, market, borrower profile, and business plan.'
+      ]}
     />
   );
 }
