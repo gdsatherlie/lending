@@ -1,16 +1,10 @@
 import Link from 'next/link';
 
 const navLinks = [
-  { label: 'Home', href: '/' },
   { label: 'Loan Programs', href: '/#loan-programs' },
-  { label: 'Bridge Loans', href: '/loan-programs/bridge-loans' },
-  { label: 'Fix & Flip', href: '/loan-programs/fix-flip' },
-  { label: 'Rental / DSCR', href: '/loan-programs/rental-dscr' },
-  { label: 'Short-Term Rental', href: '/loan-programs/short-term-rental-loans' },
-  { label: 'Ground-Up Construction', href: '/loan-programs/construction' },
-  { label: 'Multifamily & Mixed-Use', href: '/loan-programs/multifamily' },
-  { label: 'Loan Process', href: '/loan-process' },
-  { label: 'Submit Your Deal', href: '/loan-process' },
+  { label: 'Why Us', href: '/#why-us' },
+  { label: 'How It Works', href: '/loan-process' },
+  { label: 'FAQ', href: '/#faq' },
   { label: 'Insights', href: '/insights' },
   { label: 'Contact', href: '/#contact' }
 ] as const;
@@ -42,7 +36,7 @@ export function SiteFooter() {
               Privacy Policy
             </Link>
             <Link href="/terms-of-use" className="underline-offset-4 hover:text-navy hover:underline">
-              Terms of Use
+              Terms
             </Link>
           </p>
         </div>
