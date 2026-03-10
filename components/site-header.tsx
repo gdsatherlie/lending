@@ -13,7 +13,8 @@ const companyLinks = [
   { label: 'Why Us', href: '/#why-us' },
   { label: 'How It Works', href: '/loan-process' },
   { label: 'FAQ', href: '/#faq' },
-  { label: 'Insights', href: '/insights' }
+  { label: 'Insights', href: '/insights' },
+  { label: 'For Brokers & Partners', href: '/for-brokers-partners' }
 ] as const;
 
 export function SiteHeader() {
