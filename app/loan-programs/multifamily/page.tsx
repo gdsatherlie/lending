@@ -8,7 +8,7 @@ export default function MultifamilyPage() {
         'Northline Capital provides financing for small-balance multifamily and mixed-use properties requiring flexible underwriting or transitional capital.'
       ]}
       parameters={[
-        { parameter: 'Loan Size', details: '$500,000 – $7,500,000' },
+        { parameter: 'Loan Size', details: '$50,000 – $5,000,000' },
         { parameter: 'Term', details: '12 – 24 months' },
         { parameter: 'Interest Rate', details: '9.75% – 12%' },
         { parameter: 'Origination Fee', details: '2 – 3 points' },

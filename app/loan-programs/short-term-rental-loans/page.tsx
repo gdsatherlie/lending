@@ -4,7 +4,7 @@ import { LoanProgramPage } from '@/components/loan-program-page';
 export const metadata: Metadata = {
   title: 'Short-Term Rental Loans | Airbnb & Vacation Rental Financing',
   description:
-    'Northline Capital provides financing for Airbnb, VRBO, and vacation rental properties. Short-term rental loans from $250K to $3MM for investors and operators.'
+    'Northline Capital provides financing for Airbnb, VRBO, and vacation rental properties. Short-term rental loans from $50K to $5MM for investors and operators.'
 };
 
 export default function ShortTermRentalLoansPage() {
@@ -17,7 +17,7 @@ export default function ShortTermRentalLoansPage() {
         'Our underwriting approach focuses on property-level cash flow, market fundamentals, and operator experience for each short-term rental loan structure.'
       ]}
       parameters={[
-        { parameter: 'Loan Size', details: '$250,000 – $3,000,000' },
+        { parameter: 'Loan Size', details: '$50,000 – $5,000,000' },
         { parameter: 'Term', details: '12 – 24 months' },
         { parameter: 'Interest Rate', details: '10.0% – 12.5%' },
         { parameter: 'Origination Fee', details: '2 – 3 points' },

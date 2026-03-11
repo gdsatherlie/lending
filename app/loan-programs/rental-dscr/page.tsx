@@ -8,7 +8,7 @@ export default function RentalDscrPage() {
         'Northline Capital provides financing for stabilized rental properties using debt-service coverage ratio underwriting rather than personal income.'
       ]}
       parameters={[
-        { parameter: 'Loan Size', details: '$200,000 – $3,000,000' },
+        { parameter: 'Loan Size', details: '$50,000 – $5,000,000' },
         { parameter: 'Term', details: '12 – 24 months' },
         { parameter: 'Interest Rate', details: '9.5% – 12%' },
         { parameter: 'Origination Fee', details: '1.5 – 2.5 points' },

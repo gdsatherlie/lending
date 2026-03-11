@@ -9,7 +9,7 @@ export default function BridgeLoansPage() {
         'These loans support acquisitions, recapitalizations, lease-up strategies, and repositioning opportunities prior to refinancing into permanent financing.'
       ]}
       parameters={[
-        { parameter: 'Loan Size', details: '$250,000 – $5,000,000' },
+        { parameter: 'Loan Size', details: '$50,000 – $5,000,000' },
         { parameter: 'Term', details: '6 – 12 months' },
         { parameter: 'Interest Rate', details: '10.0% – 13.0%' },
         { parameter: 'Origination Fee', details: '2 – 3 points' },

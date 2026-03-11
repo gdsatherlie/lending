@@ -8,7 +8,7 @@ export default function ConstructionPage() {
         'Northline Capital provides construction financing for experienced developers building residential and small multifamily projects.'
       ]}
       parameters={[
-        { parameter: 'Loan Size', details: '$500,000 – $5,000,000' },
+        { parameter: 'Loan Size', details: '$50,000 – $5,000,000' },
         { parameter: 'Term', details: '12 – 18 months' },
         { parameter: 'Interest Rate', details: '11.5% – 13.5%' },
         { parameter: 'Origination Fee', details: '2 – 3 points' },

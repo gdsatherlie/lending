@@ -60,7 +60,7 @@ const audienceRoutes = [
 ] as const;
 
 const lendingParameters = [
-  ['Loan Size', '$250,000 – $7,500,000'],
+  ['Loan Size', '$50,000 – $5,000,000'],
   ['Loan Term', '6 – 24 Months'],
   ['Maximum LTV', 'Up to ~80%'],
   ['Maximum LTC', 'Up to ~90%'],

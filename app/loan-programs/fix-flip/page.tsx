@@ -9,7 +9,7 @@ export default function FixFlipPage() {
         'Loans include acquisition funding and renovation capital distributed through structured draw reimbursements.'
       ]}
       parameters={[
-        { parameter: 'Loan Size', details: '$150,000 – $1,500,000' },
+        { parameter: 'Loan Size', details: '$50,000 – $5,000,000' },
         { parameter: 'Term', details: '6 – 12 months' },
         { parameter: 'Interest Rate', details: '11.0% – 13.5%' },
         { parameter: 'Origination Fee', details: '2 – 3 points' },
