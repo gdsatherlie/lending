@@ -21,13 +21,13 @@ export type InsightArticle = {
 export const insightArticles: InsightArticle[] = [
   {
     slug: 'brokers-and-partners',
-    title: 'For Brokers & Partners',
+    title: 'For Brokers & Sponsors',
     category: 'Brokers & Partners',
     excerpt:
       'Northline Capital works with mortgage brokers and intermediaries to evaluate business-purpose real estate deals with speed and consistency.',
     intro:
       'Northline Capital actively partners with mortgage brokers and real estate intermediaries who need a responsive lending team for business-purpose transactions. We welcome qualified submissions and aim to provide clear feedback, dependable communication, and execution certainty throughout the process.',
-    metadataTitle: 'For Brokers & Partners | Northline Capital Insights',
+    metadataTitle: 'For Brokers & Sponsors | Northline Capital Insights',
     metadataDescription:
       'Learn how Northline Capital works with mortgage brokers and real estate intermediaries, and submit your next deal for review.',
     sections: [

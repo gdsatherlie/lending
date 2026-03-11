@@ -6,16 +6,12 @@ const navLinks = [
   { label: 'How It Works', href: '/loan-process' },
   { label: 'FAQ', href: '/#faq' },
   { label: 'Loan Acquisitions', href: '/loan-acquisitions' },
-  { label: 'Contact', href: '/#contact' }
+  { label: 'For Brokers & Sponsors', href: '/insights/brokers-and-partners' },
+  { label: 'Contact', href: '/#contact' },
+  { label: 'Insights', href: '/insights' }
 ] as const;
 
-const insightLinks = [
-  { label: 'For Brokers & Partners', href: '/insights/brokers-and-partners' },
-  { label: 'How Bridge Loans Work', href: '/insights/how-bridge-loans-work' },
-  { label: 'What Is a DSCR Loan', href: '/insights/what-is-a-dscr-loan' },
-  { label: 'Bridge Loan vs Hard Money', href: '/insights/bridge-loan-vs-hard-money' },
-  { label: 'Loan-to-Cost vs Loan-to-Value', href: '/insights/loan-to-cost-vs-loan-to-value' }
-] as const;
+
 
 export function SiteFooter() {
   return (
@@ -25,7 +21,7 @@ export function SiteFooter() {
           <p className="text-lg font-semibold text-navy">NORTHLINE CAPITAL</p>
           <p className="mt-2 text-sm text-ink/70">Business-purpose real estate lending platform.</p>
         </div>
-        <div className="space-y-4 text-sm text-ink/75">
+        <div className="text-sm text-ink/75">
           <p className="font-semibold text-ink">Navigation</p>
           <ul className="grid gap-x-5 gap-y-1 sm:grid-cols-2">
             {navLinks.map((item) => (
@@ -36,18 +32,6 @@ export function SiteFooter() {
               </li>
             ))}
           </ul>
-          <div>
-            <p className="font-semibold text-ink">Insights</p>
-            <ul className="mt-2 grid gap-y-1">
-              {insightLinks.map((item) => (
-                <li key={item.label}>
-                  <Link href={item.href} className="underline-offset-4 hover:text-navy hover:underline">
-                    {item.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
         </div>
         <div className="text-sm text-ink/75">
           <p className="font-semibold text-ink">Legal</p>
