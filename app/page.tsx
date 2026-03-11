@@ -48,8 +48,17 @@ export default function Home() {
               ))}
             </div>
           </div>
-          <div className="relative isolate rounded-sm border border-stone/80 bg-white p-3 shadow-soft">
-            <Image src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1200&q=80" alt="Commercial real estate skyline at dusk" width={900} height={1100} className="h-[540px] w-full rounded-sm object-cover" priority />
+          <div className="relative isolate overflow-hidden rounded-sm border border-stone/80 bg-white p-3 shadow-soft">
+            <div className="relative h-[540px] w-full overflow-hidden rounded-sm bg-navy/10">
+              <Image
+                src="/images/chicago-skyline-hero.jpg"
+                alt="Chicago skyline"
+                fill
+                className="object-cover object-[55%_40%]"
+                priority
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-navy/55 via-navy/20 to-navy/10" />
+            </div>
             <div className="absolute -bottom-4 -left-4 hidden border border-stone bg-cloud/95 p-4 shadow-soft md:block">
               <p className="text-xs uppercase tracking-widest text-steel">Capital Snapshot</p>
               <p className="mt-2 text-sm text-ink/80">Senior + mezz structures for acquisition, refinance, and value-add execution.</p>
@@ -95,8 +104,13 @@ export default function Home() {
             <p className="max-w-xl text-base leading-relaxed text-cloud/80">Our process is designed for sponsors who value certainty. We underwrite the business plan, not just a checklist, then communicate expectations clearly from term sheet to closing table.</p>
           </div>
           <div className="grid gap-4 sm:grid-cols-2">
-            {[['Structured speed', Clock3], ['Risk-aware credit', ShieldCheck], ['Real estate fluency', Landmark], ['Direct access to decision makers', ArrowUpRight]].map(([label, Icon]) => (
-              <div key={String(label)} className="rounded-sm border border-cloud/20 p-5">
+            {([
+              ['Structured speed', Clock3],
+              ['Risk-aware credit', ShieldCheck],
+              ['Real estate fluency', Landmark],
+              ['Direct access to decision makers', ArrowUpRight]
+            ] as const).map(([label, Icon]) => (
+              <div key={label} className="rounded-sm border border-cloud/20 p-5">
                 <Icon className="h-5 w-5" />
                 <p className="mt-4 text-sm text-cloud/90">{label}</p>
               </div>
