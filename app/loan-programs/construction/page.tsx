@@ -12,8 +12,8 @@ export default function ConstructionPage() {
         { parameter: 'Term', details: '12 – 18 months' },
         { parameter: 'Interest Rate', details: '11.5% – 13.5%' },
         { parameter: 'Origination Fee', details: '2 – 3 points' },
-        { parameter: 'Max Loan-to-Cost', details: '75%' },
-        { parameter: 'Max Loan-to-After-Completion Value', details: '65%' }
+        { parameter: 'Max Loan-to-Cost', details: 'Up to ~90%' },
+        { parameter: 'Max Loan-to-After-Completion Value', details: 'Up to ~80%' }
       ]}
       propertyTypes={['Single-family development', 'Townhomes', 'Small multifamily', 'Build-to-rent projects']}
       useCases={['Ground-up residential development', 'Build-to-rent communities', 'Small multifamily construction']}

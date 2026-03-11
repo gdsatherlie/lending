@@ -13,8 +13,8 @@ export default function FixFlipPage() {
         { parameter: 'Term', details: '6 – 12 months' },
         { parameter: 'Interest Rate', details: '11.0% – 13.5%' },
         { parameter: 'Origination Fee', details: '2 – 3 points' },
-        { parameter: 'Max Loan-to-Cost', details: '85%' },
-        { parameter: 'Max Loan-to-After-Repair Value', details: '70%' }
+        { parameter: 'Max Loan-to-Cost', details: 'Up to ~90%' },
+        { parameter: 'Max Loan-to-After-Repair Value', details: 'Up to ~80%' }
       ]}
       propertyTypes={['Single-family homes', 'Townhomes', '2–4 unit residential', 'Small multifamily']}
       useCases={['Property renovation', 'Short-term repositioning', 'Value-add resale']}

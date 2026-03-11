@@ -83,7 +83,7 @@ export const insightArticles: InsightArticle[] = [
         heading: 'Example transaction: where bridge structure helped execution',
         paragraphs: [
           'A sponsor acquires a 42-unit multifamily asset at 78% occupancy in a secondary market with strong in-migration. The plan: upgrade 24 units, improve management, push occupancy above 92%, then refinance into agency debt. Total capitalization is $5.4MM including capex and carry.',
-          'The bridge structure closes at 72% LTC and 64% as-is LTV with a 12-month initial term plus extension options conditioned on performance milestones. The lender establishes a renovation reserve and a partial interest reserve to reduce early cash pressure while units are offline. By month 11, occupancy is 93% and in-place rents support takeout sizing. Because the structure matched the execution timeline, refinance risk was controlled rather than deferred.'
+          'The bridge structure closes at up to ~90% LTC and up to ~80% as-is LTV with a 12-month initial term plus extension options conditioned on performance milestones. The lender establishes a renovation reserve and a partial interest reserve to reduce early cash pressure while units are offline. By month 11, occupancy is 93% and in-place rents support takeout sizing. Because the structure matched the execution timeline, refinance risk was controlled rather than deferred.'
         ]
       },
       {
@@ -398,9 +398,9 @@ export const insightArticles: InsightArticle[] = [
         table: {
           headers: ['Scenario', 'Total Cost', 'As-Is / As-Complete Value', 'Max LTC', 'Max LTV', 'Binding Constraint'],
           rows: [
-            ['Bridge acquisition', '$4.0MM', '$5.5MM as-is', '75% = $3.0MM', '65% = $3.575MM', 'LTC binds'],
+            ['Bridge acquisition', '$4.0MM', '$5.5MM as-is', 'Up to ~90% = $3.6MM', 'Up to ~80% = $4.4MM', 'LTC binds'],
             ['Value-add with thin basis', '$5.2MM', '$6.4MM as-is', '80% = $4.16MM', '65% = $4.16MM', 'Both equal'],
-            ['Construction execution', '$8.0MM', '$10.0MM as-complete', '75% = $6.0MM', '65% = $6.5MM', 'LTC binds']
+            ['Construction execution', '$8.0MM', '$10.0MM as-complete', 'Up to ~90% = $7.2MM', 'Up to ~80% = $8.0MM', 'LTC binds']
           ]
         },
         paragraphs: [
@@ -517,7 +517,7 @@ export const insightArticles: InsightArticle[] = [
       {
         heading: 'Example: realistic construction execution scenario',
         paragraphs: [
-          'A borrower plans a 10-unit infill townhome development with total cost of $7.8MM and projected sellout of $10.4MM. The lender sizes to 74% LTC, requires robust contingency and interest reserve, and conditions future draws on monthly inspection sign-offs and updated budget tracking.',
+          'A borrower plans a 10-unit infill townhome development with total cost of $7.8MM and projected sellout of $10.4MM. The lender sizes to up to ~90% LTC, requires robust contingency and interest reserve, and conditions future draws on monthly inspection sign-offs and updated budget tracking.',
           'Mid-project, material costs rise and schedule extends by eight weeks. Because contingency and carry were structured conservatively, the sponsor absorbs overrun without emergency recapitalization. The project completes, units sell through over six months, and the loan exits without distress. Structure, not luck, preserved the outcome.'
         ]
       },

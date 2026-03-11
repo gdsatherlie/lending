@@ -69,6 +69,8 @@ export function SiteFooter() {
           discretion.
         </p>
         <p>Northline Capital does not provide consumer mortgage loans.</p>
+        <p>Northline Capital provides financing for business-purpose real estate transactions. Loan programs are offered to experienced real estate investors and are subject to underwriting and applicable regulatory requirements.</p>
+        <p>© {new Date().getFullYear()} Northline Capital. All rights reserved.</p>
       </div>
     </footer>
   );

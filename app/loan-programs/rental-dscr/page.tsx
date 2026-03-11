@@ -12,7 +12,7 @@ export default function RentalDscrPage() {
         { parameter: 'Term', details: '12 – 24 months' },
         { parameter: 'Interest Rate', details: '9.5% – 12%' },
         { parameter: 'Origination Fee', details: '1.5 – 2.5 points' },
-        { parameter: 'Max Loan-to-Value', details: '70%' },
+        { parameter: 'Max Loan-to-Value', details: 'Up to ~80%' },
         { parameter: 'Minimum DSCR', details: '1.0x' }
       ]}
       propertyTypes={['Single-family rentals', 'Townhomes', 'Small multifamily', 'Rental portfolios']}

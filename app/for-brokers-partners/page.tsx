@@ -126,7 +126,7 @@ export default function BrokersPartnersPage() {
             href="/loan-process"
             className="mt-6 inline-flex rounded-sm border border-navy bg-navy px-7 py-3 text-sm font-semibold text-cloud transition hover:bg-ink"
           >
-            Submit a Deal
+            Submit Your Deal
           </Link>
         </article>
       </section>
@@ -134,7 +134,7 @@ export default function BrokersPartnersPage() {
       <ConversionCta
         heading="Have a Deal to Discuss?"
         body="Northline Capital works with brokers and originating partners across a range of business-purpose real estate transactions."
-        primaryLabel="Submit a Deal"
+        primaryLabel="Submit Your Deal"
       />
 
       <SiteFooter />

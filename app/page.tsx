@@ -107,9 +107,9 @@ const lendingMarkets = [
 
 const lendingParameters = [
   ['Loan Size', '$250,000 – $7,500,000'],
-  ['Loan Term', '6 – 24 months'],
-  ['Maximum LTV', 'Up to ~70%'],
-  ['Maximum LTC', 'Up to ~80%'],
+  ['Loan Term', '6 – 24 Months'],
+  ['Maximum LTV', 'Up to ~80%'],
+  ['Maximum LTC', 'Up to ~90%'],
   ['Property Types', 'Residential investment, multifamily, mixed-use, transitional real estate'],
   ['Borrowers', 'Experienced real estate investors and sponsors']
 ] as const;
@@ -135,7 +135,7 @@ export default function Home() {
             <h1 className="text-4xl font-semibold leading-tight text-navy sm:text-5xl lg:text-6xl">Institutional execution speed for experienced real estate operators.</h1>
             <p className="max-w-xl text-lg leading-relaxed text-ink/75">Northline Capital delivers structured bridge, construction, and rental financing with practical underwriting, direct decision-makers, and dependable closings.</p>
             <div className="flex flex-wrap gap-4">
-              <Link href="/loan-process" className="rounded-sm bg-navy px-7 py-3 text-sm font-medium text-cloud transition hover:bg-ink">Apply Now</Link>
+              <Link href="/loan-process" className="rounded-sm bg-navy px-7 py-3 text-sm font-medium text-cloud transition hover:bg-ink">Submit Your Deal</Link>
               <Link href="#loan-programs" className="rounded-sm border border-stone bg-white px-7 py-3 text-sm font-medium text-ink transition hover:border-ink">View Programs</Link>
             </div>
             <div className="grid gap-4 border-t border-stone pt-6 sm:grid-cols-3">
@@ -396,7 +396,7 @@ export default function Home() {
             {/* Swap contact placeholders with real channels */}
             <p className="mt-4 text-sm text-cloud/75">(000) 000-0000 • originations@northlinecapital.com</p>
           </div>
-          <Link href="/loan-process" className="rounded-sm border border-cloud bg-cloud px-7 py-3 text-sm font-semibold text-navy transition hover:bg-white">Get Terms</Link>
+          <Link href="/loan-process" className="rounded-sm border border-cloud bg-cloud px-7 py-3 text-sm font-semibold text-navy transition hover:bg-white">Submit Your Deal</Link>
         </div>
       </section>
 

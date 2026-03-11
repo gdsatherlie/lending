@@ -12,8 +12,8 @@ export default function MultifamilyPage() {
         { parameter: 'Term', details: '12 – 24 months' },
         { parameter: 'Interest Rate', details: '9.75% – 12%' },
         { parameter: 'Origination Fee', details: '2 – 3 points' },
-        { parameter: 'Max Loan-to-Value', details: '70%' },
-        { parameter: 'Max Loan-to-Cost', details: '80%' }
+        { parameter: 'Max Loan-to-Value', details: 'Up to ~80%' },
+        { parameter: 'Max Loan-to-Cost', details: 'Up to ~90%' }
       ]}
       propertyTypes={['Multifamily', 'Mixed-use', 'Workforce housing', 'Value-add acquisitions']}
       useCases={['Value-add multifamily acquisitions', 'Mixed-use repositioning', 'Bridge to permanent financing']}

@@ -11,7 +11,7 @@ const examples = [
     situation:
       'Sponsor acquired a partially vacant apartment property requiring lease-up and operational improvements.',
     solution:
-      'Bridge loan structured at approximately 70% loan-to-cost with a 12-month term to allow stabilization prior to refinance.'
+      'Bridge loan structured at approximately up to ~90% loan-to-cost with a 12-month term to allow stabilization prior to refinance.'
   },
   {
     title: 'Fix & Flip Loan',

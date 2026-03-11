@@ -21,7 +21,7 @@ export default function ShortTermRentalLoansPage() {
         { parameter: 'Term', details: '12 – 24 months' },
         { parameter: 'Interest Rate', details: '10.0% – 12.5%' },
         { parameter: 'Origination Fee', details: '2 – 3 points' },
-        { parameter: 'Max Loan-to-Value', details: '65%' },
+        { parameter: 'Max Loan-to-Value', details: 'Up to ~80%' },
         { parameter: 'Minimum DSCR', details: '1.0x' }
       ]}
       propertyTypes={[
