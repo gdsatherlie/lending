@@ -42,11 +42,6 @@ export default function Home() {
               <Link href="#final-cta" className="rounded-sm bg-navy px-7 py-3 text-sm font-medium text-cloud transition hover:bg-ink">Apply Now</Link>
               <Link href="#loan-programs" className="rounded-sm border border-stone bg-white px-7 py-3 text-sm font-medium text-ink transition hover:border-ink">View Programs</Link>
             </div>
-            <div className="grid gap-4 border-t border-stone pt-6 sm:grid-cols-3">
-              {['$2B+ Sponsor Pipeline Reviewed', '10–15 Day Typical Closings', 'Repeat Operator Focus'].map((item) => (
-                <p key={item} className="text-sm font-medium text-ink/70">{item}</p>
-              ))}
-            </div>
           </div>
           <div className="relative isolate overflow-hidden rounded-sm border border-stone/80 bg-white p-3 shadow-soft">
             <div className="relative h-[540px] w-full overflow-hidden rounded-sm bg-navy/10">
@@ -64,14 +59,6 @@ export default function Home() {
               <p className="mt-2 text-sm text-ink/80">Senior + mezz structures for acquisition, refinance, and value-add execution.</p>
             </div>
           </div>
-        </div>
-      </section>
-
-      <section className="border-y border-stone bg-white py-8">
-        <div className="section-shell grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
-          {['Business-purpose only', 'Direct communication', 'Transparent process', 'Execution-focused underwriting', 'Built for repeat borrowers'].map((item) => (
-            <p key={item} className="rounded-sm border border-stone/80 px-4 py-3 text-center text-sm font-medium text-ink/75">{item}</p>
-          ))}
         </div>
       </section>
 
