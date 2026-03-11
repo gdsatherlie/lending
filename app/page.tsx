@@ -42,27 +42,24 @@ export default function Home() {
               <Link href="#final-cta" className="rounded-sm bg-navy px-7 py-3 text-sm font-medium text-cloud transition hover:bg-ink">Apply Now</Link>
               <Link href="#loan-programs" className="rounded-sm border border-stone bg-white px-7 py-3 text-sm font-medium text-ink transition hover:border-ink">View Programs</Link>
             </div>
-            <div className="grid gap-4 border-t border-stone pt-6 sm:grid-cols-3">
-              {['$2B+ Sponsor Pipeline Reviewed', '10–15 Day Typical Closings', 'Repeat Operator Focus'].map((item) => (
-                <p key={item} className="text-sm font-medium text-ink/70">{item}</p>
-              ))}
-            </div>
           </div>
-          <div className="relative isolate rounded-sm border border-stone/80 bg-white p-3 shadow-soft">
-            <Image src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1200&q=80" alt="Commercial real estate skyline at dusk" width={900} height={1100} className="h-[540px] w-full rounded-sm object-cover" priority />
+          <div className="relative isolate overflow-hidden rounded-sm border border-stone/80 bg-white p-3 shadow-soft">
+            <div className="relative h-[540px] w-full overflow-hidden rounded-sm bg-navy/10">
+              <Image
+                src="/images/chicago-skyline-hero.jpg"
+                alt="Chicago skyline"
+                fill
+                className="object-cover object-[62%_38%] saturate-[0.92] contrast-[1.05]"
+                priority
+              />
+              <div className="absolute inset-0 bg-gradient-to-tr from-navy/60 via-navy/22 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-b from-navy/18 via-transparent to-navy/28" />
+            </div>
             <div className="absolute -bottom-4 -left-4 hidden border border-stone bg-cloud/95 p-4 shadow-soft md:block">
               <p className="text-xs uppercase tracking-widest text-steel">Capital Snapshot</p>
               <p className="mt-2 text-sm text-ink/80">Senior + mezz structures for acquisition, refinance, and value-add execution.</p>
             </div>
           </div>
-        </div>
-      </section>
-
-      <section className="border-y border-stone bg-white py-8">
-        <div className="section-shell grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
-          {['Business-purpose only', 'Direct communication', 'Transparent process', 'Execution-focused underwriting', 'Built for repeat borrowers'].map((item) => (
-            <p key={item} className="rounded-sm border border-stone/80 px-4 py-3 text-center text-sm font-medium text-ink/75">{item}</p>
-          ))}
         </div>
       </section>
 
@@ -95,8 +92,13 @@ export default function Home() {
             <p className="max-w-xl text-base leading-relaxed text-cloud/80">Our process is designed for sponsors who value certainty. We underwrite the business plan, not just a checklist, then communicate expectations clearly from term sheet to closing table.</p>
           </div>
           <div className="grid gap-4 sm:grid-cols-2">
-            {[['Structured speed', Clock3], ['Risk-aware credit', ShieldCheck], ['Real estate fluency', Landmark], ['Direct access to decision makers', ArrowUpRight]].map(([label, Icon]) => (
-              <div key={String(label)} className="rounded-sm border border-cloud/20 p-5">
+            {([
+              ['Structured speed', Clock3],
+              ['Risk-aware credit', ShieldCheck],
+              ['Real estate fluency', Landmark],
+              ['Direct access to decision makers', ArrowUpRight]
+            ] as const).map(([label, Icon]) => (
+              <div key={label} className="rounded-sm border border-cloud/20 p-5">
                 <Icon className="h-5 w-5" />
                 <p className="mt-4 text-sm text-cloud/90">{label}</p>
               </div>
