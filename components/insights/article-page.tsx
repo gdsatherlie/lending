@@ -5,6 +5,10 @@ import { ArticleCard } from '@/components/insights/article-card';
 import { insightBySlug, type InsightArticle } from '@/components/insights-content';
 
 const internalLinksBySlug: Record<string, { href: string; label: string }[]> = {
+  'brokers-and-partners': [
+    { href: '/for-brokers-partners', label: 'For Brokers & Partners' },
+    { href: '/loan-process', label: 'Submit Your Deal' }
+  ],
   'how-bridge-loans-work': [
     { href: '/loan-programs/bridge-loans', label: 'Bridge Loans Program' },
     { href: '/loan-process', label: 'Loan Process' }

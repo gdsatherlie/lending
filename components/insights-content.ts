@@ -20,6 +20,61 @@ export type InsightArticle = {
 
 export const insightArticles: InsightArticle[] = [
   {
+    slug: 'brokers-and-partners',
+    title: 'For Brokers & Partners',
+    category: 'Brokers & Partners',
+    excerpt:
+      'Northline Capital works with mortgage brokers and intermediaries to evaluate business-purpose real estate deals with speed and consistency.',
+    intro:
+      'Northline Capital actively partners with mortgage brokers and real estate intermediaries who need a responsive lending team for business-purpose transactions. We welcome qualified submissions and aim to provide clear feedback, dependable communication, and execution certainty throughout the process.',
+    metadataTitle: 'For Brokers & Partners | Northline Capital Insights',
+    metadataDescription:
+      'Learn how Northline Capital works with mortgage brokers and real estate intermediaries, and submit your next deal for review.',
+    sections: [
+      {
+        heading: 'Introduction',
+        paragraphs: [
+          'Brokers and partners are a core part of our origination platform. Many of our strongest transactions come from experienced intermediaries who understand sponsor quality, timeline sensitivity, and documentation readiness before a file is submitted.',
+          'Our objective is straightforward: help qualified brokers place executable deals while protecting borrower trust through transparent underwriting expectations and realistic timelines.'
+        ]
+      },
+      {
+        heading: 'What We Look For',
+        bullets: [
+          'Business-purpose transactions secured by investment or commercial real estate',
+          'Clear use of proceeds, structure rationale, and exit strategy',
+          'Sponsorship with relevant experience and sufficient liquidity',
+          'Reasonable leverage request aligned with asset profile and business plan',
+          'Organized submissions with rent rolls, operating statements, and entity details when available'
+        ],
+        paragraphs: [
+          'Well-prepared submissions move faster because underwriting can focus on execution risk instead of information gaps. Even when a structure needs adjustment, strong initial packaging typically improves certainty and response time.'
+        ]
+      },
+      {
+        heading: 'Why Brokers Work With Northline',
+        bullets: [
+          'Direct communication with decision-oriented lending professionals',
+          'Practical feedback on structure, sizing, and conditionality',
+          'Consistent process from initial review through closing coordination',
+          'Experience across bridge, rental/DSCR, fix-and-flip, and construction scenarios',
+          'A partnership approach focused on repeat, long-term intermediary relationships'
+        ],
+        paragraphs: [
+          'Our team values brokers who bring disciplined borrowers and clear narratives. In return, we aim to provide responsive answers and a reliable process that helps you manage borrower expectations from first call to closing.'
+        ]
+      },
+      {
+        heading: 'Call To Action (Submit Your Deal)',
+        paragraphs: [
+          'If you have a deal that fits our business-purpose lending profile, we encourage you to submit it for review. The more complete the package, the faster we can evaluate structure and next steps.',
+          'To start, visit /for-brokers-partners or submit directly through /loan-process so our team can review your scenario and respond promptly.'
+        ]
+      }
+    ],
+    related: ['how-bridge-loans-work', 'what-is-a-dscr-loan', 'bridge-loan-vs-hard-money']
+  },
+  {
     slug: 'how-bridge-loans-work',
     title: 'How Bridge Loans Work for Real Estate Investors',
     category: 'Bridge Lending',
