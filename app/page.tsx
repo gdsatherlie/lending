@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { ArrowUpRight, Clock3, Landmark, ShieldCheck, type LucideIcon } from 'lucide-react';
 import { SiteHeader } from '@/components/site-header';
 import { SiteFooter } from '@/components/site-footer';
+import { ConversionCta } from '@/components/conversion-cta';
 
 const programs = [
   {
@@ -384,6 +385,8 @@ export default function Home() {
           ))}
         </div>
       </section>
+
+      <ConversionCta />
 
       <section id="final-cta" className="bg-navy py-20 text-cloud">
         <div className="section-shell flex flex-col items-start justify-between gap-8 md:flex-row md:items-end">

@@ -1,6 +1,7 @@
 import { SiteHeader } from '@/components/site-header';
 import { SiteFooter } from '@/components/site-footer';
 import { SubmitDealForm } from '@/components/forms/submit-deal-form';
+import { ConversionCta } from '@/components/conversion-cta';
 
 export default function LoanProcessPage() {
   return (
@@ -47,6 +48,8 @@ export default function LoanProcessPage() {
       <section className="section-shell pb-24">
         <SubmitDealForm />
       </section>
+
+      <ConversionCta />
 
       <SiteFooter />
     </main>

@@ -1,6 +1,6 @@
-import Link from 'next/link';
 import { SiteHeader } from '@/components/site-header';
 import { SiteFooter } from '@/components/site-footer';
+import { ConversionCta } from '@/components/conversion-cta';
 
 const acquisitions = [
   'Performing loans',
@@ -191,27 +191,12 @@ export default function LoanAcquisitionsPage() {
         </article>
       </section>
 
-      <section className="bg-navy py-20 text-cloud">
-        <div className="section-shell flex flex-col items-start justify-between gap-8 md:flex-row md:items-end">
-          <div>
-            <p className="eyebrow text-cloud/65">Institutional Capability</p>
-            <h2 className="mt-3 max-w-2xl text-3xl font-semibold sm:text-4xl">Looking to Sell a Loan or Portfolio?</h2>
-            <p className="mt-4 max-w-2xl text-sm leading-relaxed text-cloud/80">
-              Northline Capital reviews select business-purpose real estate debt opportunities, including individual
-              loans, participation interests, and small portfolios.
-            </p>
-            <p className="mt-3 text-xs text-cloud/70">
-              We are happy to review summary information on a discreet, no-obligation basis.
-            </p>
-          </div>
-          <Link
-            href="/contact"
-            className="rounded-sm border border-cloud bg-cloud px-7 py-3 text-sm font-semibold text-navy transition hover:bg-white"
-          >
-            Discuss a Loan Sale
-          </Link>
-        </div>
-      </section>
+      <ConversionCta
+        heading="Looking to Sell a Loan or Portfolio?"
+        body="Northline Capital reviews select business-purpose real estate debt opportunities, including individual loans, participation interests, and small portfolios."
+        primaryLabel="Discuss a Loan Sale"
+        primaryHref="/contact"
+      />
 
       <SiteFooter />
     </main>

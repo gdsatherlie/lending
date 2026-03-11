@@ -1,6 +1,6 @@
-import Link from 'next/link';
 import { SiteHeader } from '@/components/site-header';
 import { SiteFooter } from '@/components/site-footer';
+import { ConversionCta } from '@/components/conversion-cta';
 
 type LoanParameter = {
   parameter: string;
@@ -133,30 +133,7 @@ export function LoanProgramPage({
         </article>
       </section>
 
-      <section className="bg-navy py-16 text-cloud">
-        <div className="section-shell text-center">
-          <p className="mx-auto max-w-4xl text-xs leading-relaxed text-cloud/75">
-            All loans are for business-purpose real estate transactions only, are subject to underwriting approval,
-            and are not available for consumer purposes or owner-occupied primary residence use.
-          </p>
-          <h2 className="mt-4 text-3xl font-semibold">{ctaHeadline ?? `Ready to discuss a ${title.toLowerCase()} scenario?`}</h2>
-          <p className="mx-auto mt-4 max-w-2xl text-sm text-cloud/80">Business-purpose loans only. Terms are subject to underwriting and final documentation.</p>
-          <p className="mx-auto mt-3 max-w-3xl text-xs leading-relaxed text-cloud/75">
-            By submitting this inquiry, you acknowledge that you are seeking financing for a business-purpose or
-            investment real estate transaction, not consumer or owner-occupied residential financing.
-          </p>
-          <p className="mx-auto mt-2 max-w-3xl text-xs leading-relaxed text-cloud/75">
-            Submission of a deal inquiry does not constitute approval, a commitment to lend, or an agreement to
-            provide financing.
-          </p>
-          <Link
-            href="#contact"
-            className="mt-7 inline-flex rounded-sm border border-cloud bg-cloud px-7 py-3 text-sm font-semibold text-navy transition hover:bg-white"
-          >
-            Submit Your Deal
-          </Link>
-        </div>
-      </section>
+      <ConversionCta heading={ctaHeadline ?? `Ready to discuss a ${title.toLowerCase()} scenario?`} />
 
       <SiteFooter />
     </main>

@@ -1,5 +1,6 @@
 import { SiteHeader } from '@/components/site-header';
 import { SiteFooter } from '@/components/site-footer';
+import { ConversionCta } from '@/components/conversion-cta';
 
 const examples = [
   {
@@ -83,6 +84,8 @@ export default function ExampleTransactionsPage() {
           ))}
         </div>
       </section>
+
+      <ConversionCta />
 
       <SiteFooter />
     </main>

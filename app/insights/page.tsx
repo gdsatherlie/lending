@@ -1,6 +1,6 @@
-import Link from 'next/link';
 import { SiteHeader } from '@/components/site-header';
 import { SiteFooter } from '@/components/site-footer';
+import { ConversionCta } from '@/components/conversion-cta';
 import { ArticleCard } from '@/components/insights/article-card';
 import { insightArticles } from '@/components/insights-content';
 
@@ -28,17 +28,7 @@ export default function InsightsPage() {
         </div>
       </section>
 
-      <section className="bg-navy py-16 text-cloud">
-        <div className="section-shell flex flex-col items-start justify-between gap-8 md:flex-row md:items-end">
-          <div>
-            <h2 className="text-3xl font-semibold">Need help structuring your next deal?</h2>
-            <p className="mt-4 text-sm text-cloud/80">We provide business-purpose lending only, with clear terms and disciplined execution.</p>
-          </div>
-          <Link href="#contact" className="rounded-sm border border-cloud bg-cloud px-7 py-3 text-sm font-semibold text-navy transition hover:bg-white">
-            Submit Your Deal
-          </Link>
-        </div>
-      </section>
+      <ConversionCta />
 
       <SiteFooter />
     </main>
