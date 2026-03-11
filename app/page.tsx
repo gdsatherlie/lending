@@ -44,16 +44,17 @@ export default function Home() {
             </div>
           </div>
           <div className="relative isolate overflow-hidden rounded-sm border border-stone/80 bg-white p-3 shadow-soft">
-            <div className="relative h-[540px] w-full overflow-hidden rounded-sm bg-navy/10">
+            <div className="relative h-[460px] w-full overflow-hidden rounded-sm bg-navy/10 sm:h-[520px] lg:h-[540px]">
               <Image
                 src="/images/chicago-skyline-hero.jpg"
                 alt="Chicago skyline"
                 fill
-                className="object-cover object-[62%_38%] saturate-[0.92] contrast-[1.05]"
+                className="object-cover object-[74%_34%] sm:object-[68%_36%] lg:object-[62%_38%]"
+                sizes="(min-width: 1024px) 38vw, (min-width: 640px) 46vw, 92vw"
                 priority
               />
-              <div className="absolute inset-0 bg-gradient-to-tr from-navy/60 via-navy/22 to-transparent" />
-              <div className="absolute inset-0 bg-gradient-to-b from-navy/18 via-transparent to-navy/28" />
+              <div className="absolute inset-0 bg-gradient-to-tr from-navy/58 via-navy/18 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-b from-navy/12 via-transparent to-navy/24" />
             </div>
             <div className="absolute -bottom-4 -left-4 hidden border border-stone bg-cloud/95 p-4 shadow-soft md:block">
               <p className="text-xs uppercase tracking-widest text-steel">Capital Snapshot</p>
