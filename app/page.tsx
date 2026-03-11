@@ -107,11 +107,11 @@ export default function Home() {
           </div>
           <div className="relative isolate rounded-sm border border-stone/80 bg-white p-3 shadow-soft">
             <Image
-              src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1200&q=80"
+              src="/images/chicago-skyline-hero.jpg"
               alt="Commercial real estate skyline at dusk"
               width={900}
               height={1100}
-              className="h-[540px] w-full rounded-sm object-cover"
+              className="h-[540px] w-full rounded-sm object-cover object-[center_32%]"
               priority
             />
           </div>
