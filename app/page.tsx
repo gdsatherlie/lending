@@ -41,19 +41,19 @@ const audienceRoutes = [
   {
     title: 'Borrowers',
     description:
-      'Seeking financing for an investment property, transitional asset, or business-purpose real estate opportunity.',
+      'Seeking financing for an investment property or transitional business-purpose real estate opportunity.',
     cta: 'Submit Your Deal',
     href: '/loan-process'
   },
   {
     title: 'Brokers & Partners',
-    description: 'Looking for a lending partner for your client, transaction, or ongoing deal flow.',
+    description: 'Seeking a lending partner for your client transaction or ongoing deal flow.',
     cta: 'For Brokers & Partners',
     href: '/for-brokers-partners'
   },
   {
     title: 'Loan Sellers',
-    description: 'Evaluating the sale of a loan, note, participation interest, or small portfolio.',
+    description: 'Evaluating the sale of a loan, note, participation interest, or small portfolio position.',
     cta: 'Loan Acquisitions',
     href: '/loan-acquisitions'
   }
@@ -69,10 +69,9 @@ const lendingParameters = [
 ] as const;
 
 const exampleTransactions = [
-  ['Scottsdale, AZ', 'Bridge', '$3.4MM', 'Hospitality conversion', '11 business days to close'],
-  ['Charlotte, NC', 'Fix & Flip', '$1.1MM', 'SFR heavy rehab', '48-hour initial term sheet'],
-  ['Tampa, FL', 'Rental / DSCR', '$2.8MM', 'Portfolio refinance', 'Cash-out + rate reset'],
-  ['Nashville, TN', 'Construction', '$6.2MM', '12-unit infill project', 'Milestone draw schedule']
+  ['Value-Add Multifamily Bridge Loan', '$4.2MM', 'Texas', 'Lease-up and operational improvements', 'Bridge loan to stabilization'],
+  ['Fix & Flip Loan', '$520K', 'Arizona', 'Acquisition and full renovation', 'Short-term renovation and resale execution'],
+  ['Rental / DSCR Loan', '$1.35MM', 'Florida', 'Refinance of stabilized rental asset', 'Income-based rental loan structure']
 ] as const;
 
 export default function Home() {
@@ -88,8 +87,8 @@ export default function Home() {
               Institutional execution speed for experienced real estate operators.
             </h1>
             <p className="max-w-xl text-lg leading-relaxed text-ink/75">
-              Northline Capital delivers structured bridge, construction, and rental financing with practical
-              underwriting, direct decision-makers, and dependable closings.
+              Northline Capital provides business-purpose real estate loans for investment properties and
+              transitional assets.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link
@@ -99,10 +98,10 @@ export default function Home() {
                 Submit Your Deal
               </Link>
               <Link
-                href="#loan-programs"
+                href="/contact"
                 className="rounded-sm border border-stone bg-white px-7 py-3 text-sm font-medium text-ink transition hover:border-ink"
               >
-                View Programs
+                Contact
               </Link>
             </div>
           </div>
@@ -119,13 +118,13 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="why-us" className="section-shell py-24">
+      <section id="why-us" className="section-shell py-28">
         <div className="mb-10 max-w-3xl space-y-3">
           <p className="eyebrow">Work With Northline</p>
           <h2 className="text-3xl font-semibold text-navy sm:text-4xl">How Can We Help?</h2>
           <p className="text-sm leading-relaxed text-ink/75">
-            Northline Capital works with borrowers, brokers, and counterparties across a range of business-purpose real
-            estate credit opportunities.
+            Northline Capital works with borrowers, brokers, and counterparties across business-purpose real estate
+            credit opportunities.
           </p>
         </div>
         <div className="grid gap-5 md:grid-cols-3">
@@ -144,7 +143,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="loan-programs" className="section-shell py-24">
+      <section id="loan-programs" className="section-shell py-28">
         <div className="mb-12 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
           <div className="max-w-2xl space-y-3">
             <p className="eyebrow">Loan Programs</p>
@@ -174,7 +173,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="faq" className="section-shell pb-24">
+      <section id="faq" className="section-shell pb-28">
         <article className="rounded-sm border border-stone bg-white p-8 shadow-soft">
           <p className="eyebrow">Credit Overview</p>
           <h2 className="mt-3 text-3xl font-semibold text-navy sm:text-4xl">Typical Lending Parameters</h2>
@@ -192,32 +191,27 @@ export default function Home() {
         </article>
       </section>
 
-      <section className="bg-white py-24">
+      <section className="bg-white py-28">
         <div className="section-shell">
           <div className="mb-8 flex items-end justify-between gap-4">
             <div>
               <p className="eyebrow">Example Transactions</p>
-              <h2 className="mt-3 text-3xl font-semibold text-navy sm:text-4xl">Recent funding scenarios.</h2>
+              <h2 className="mt-3 text-3xl font-semibold text-navy sm:text-4xl">Illustrative transaction examples.</h2>
             </div>
-            <p className="hidden text-sm text-ink/65 md:block">Illustrative examples — replace with funded deal data.</p>
+            <p className="hidden text-sm text-ink/65 md:block">Representative scenarios. See full examples page for additional context.</p>
           </div>
-          <div className="grid gap-5 lg:grid-cols-2">
-            {exampleTransactions.map(([market, type, amount, useCase, timeline]) => (
-              <article key={market + type} className="rounded-sm border border-stone p-6">
+          <Link href="/example-transactions" className="mb-6 inline-flex text-sm font-medium text-navy underline underline-offset-4">View All Example Transactions</Link>
+          <div className="grid gap-5 lg:grid-cols-3">
+            {exampleTransactions.map(([title, amount, location, situation, solution]) => (
+              <article key={title} className="rounded-sm border border-stone p-6">
                 <div className="flex items-baseline justify-between">
-                  <h3 className="text-xl font-semibold text-navy">{market}</h3>
+                  <h3 className="text-xl font-semibold text-navy">{title}</h3>
                   <p className="text-sm text-ink/60">{amount}</p>
                 </div>
-                <div className="mt-4 grid gap-2 text-sm text-ink/75 sm:grid-cols-2">
-                  <p>
-                    <span className="font-medium text-ink">Loan Type:</span> {type}
-                  </p>
-                  <p>
-                    <span className="font-medium text-ink">Use Case:</span> {useCase}
-                  </p>
-                  <p className="sm:col-span-2">
-                    <span className="font-medium text-ink">Timeline:</span> {timeline}
-                  </p>
+                <div className="mt-4 grid gap-2 text-sm text-ink/75">
+                  <p><span className="font-medium text-ink">Location:</span> {location}</p>
+                  <p><span className="font-medium text-ink">Situation:</span> {situation}</p>
+                  <p><span className="font-medium text-ink">Northline Solution:</span> {solution}</p>
                 </div>
               </article>
             ))}
@@ -228,10 +222,11 @@ export default function Home() {
       <section id="final-cta" className="bg-navy py-20 text-cloud">
         <div className="section-shell flex flex-col items-start justify-between gap-8 md:flex-row md:items-end">
           <div>
-            <p className="eyebrow text-cloud/65">Ready to Structure a Deal?</p>
-            <h2 className="mt-3 max-w-2xl text-3xl font-semibold sm:text-4xl">
-              Submit your scenario and receive clear, business-purpose terms.
-            </h2>
+            <h2 className="max-w-2xl text-3xl font-semibold sm:text-4xl">Have a Deal to Discuss?</h2>
+            <p className="mt-4 max-w-2xl text-sm leading-relaxed text-cloud/80">
+              Northline Capital reviews business-purpose real estate financing opportunities across a range of asset
+              types and situations.
+            </p>
             <p className="mt-4 text-sm text-cloud/75">(000) 000-0000 • originations@northlinecapital.com</p>
           </div>
           <div className="flex flex-wrap gap-3">
