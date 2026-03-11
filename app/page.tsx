@@ -49,10 +49,11 @@ export default function Home() {
                 src="/images/chicago-skyline-hero.jpg"
                 alt="Chicago skyline"
                 fill
-                className="object-cover object-[55%_40%]"
+                className="object-cover object-[62%_38%] saturate-[0.92] contrast-[1.05]"
                 priority
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-navy/55 via-navy/20 to-navy/10" />
+              <div className="absolute inset-0 bg-gradient-to-tr from-navy/60 via-navy/22 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-b from-navy/18 via-transparent to-navy/28" />
             </div>
             <div className="absolute -bottom-4 -left-4 hidden border border-stone bg-cloud/95 p-4 shadow-soft md:block">
               <p className="text-xs uppercase tracking-widest text-steel">Capital Snapshot</p>
