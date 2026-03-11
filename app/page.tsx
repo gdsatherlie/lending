@@ -94,6 +94,25 @@ const audienceRoutes = [
   }
 ] as const;
 
+const lendingMarkets = [
+  'Texas',
+  'Florida',
+  'Arizona',
+  'Tennessee',
+  'Georgia',
+  'North Carolina',
+  'Midwest Markets'
+] as const;
+
+const lendingParameters = [
+  ['Loan Size', '$250,000 – $7,500,000'],
+  ['Loan Term', '6 – 24 months'],
+  ['Maximum LTV', 'Up to ~70%'],
+  ['Maximum LTC', 'Up to ~80%'],
+  ['Property Types', 'Residential investment, multifamily, mixed-use, transitional real estate'],
+  ['Borrowers', 'Experienced real estate investors and sponsors']
+] as const;
+
 const faqs = [
   ['Do you lend on owner-occupied properties?', 'No. We provide business-purpose lending only and do not finance owner-occupied consumer residences.'],
   ['What property types do you finance?', 'We focus on investment real estate including 1-4 unit non-owner occupied, multifamily, mixed-use, and select commercial collateral.'],
@@ -293,6 +312,45 @@ export default function Home() {
             Loan Acquisitions
           </Link>
         </article>
+      </section>
+
+
+      <section className="section-shell pb-12">
+        <div className="grid gap-8 lg:grid-cols-[1fr_1fr]">
+          <article className="rounded-sm border border-stone bg-white p-8 shadow-soft">
+            <p className="eyebrow">Lending Footprint</p>
+            <h2 className="mt-3 text-3xl font-semibold text-navy sm:text-4xl">Markets We Lend In</h2>
+            <p className="mt-4 text-sm leading-relaxed text-ink/75">
+              Northline Capital provides business-purpose real estate financing across select U.S. markets.
+              Transactions are evaluated based on property fundamentals, borrower experience, and applicable
+              regulatory considerations.
+            </p>
+            <div className="mt-6 grid gap-3 sm:grid-cols-2">
+              {lendingMarkets.map((market) => (
+                <p key={market} className="rounded-sm border border-stone/80 bg-cloud px-4 py-3 text-sm text-ink/80">
+                  {market}
+                </p>
+              ))}
+            </div>
+            <p className="mt-4 text-xs text-ink/65">Illustrative markets shown; lending availability varies by transaction and jurisdiction.</p>
+          </article>
+
+          <article className="rounded-sm border border-stone bg-white p-8 shadow-soft">
+            <p className="eyebrow">Credit Overview</p>
+            <h2 className="mt-3 text-3xl font-semibold text-navy sm:text-4xl">Typical Lending Parameters</h2>
+            <div className="mt-6 divide-y divide-stone rounded-sm border border-stone/80 bg-cloud">
+              {lendingParameters.map(([label, value]) => (
+                <div key={label} className="grid gap-2 px-4 py-3 sm:grid-cols-[0.42fr_1fr] sm:items-center">
+                  <p className="text-sm font-semibold text-navy">{label}</p>
+                  <p className="text-sm leading-relaxed text-ink/80">{value}</p>
+                </div>
+              ))}
+            </div>
+            <p className="mt-4 text-xs text-ink/65">
+              Lending parameters may vary based on asset type, borrower experience, and transaction characteristics.
+            </p>
+          </article>
+        </div>
       </section>
 
       <section className="section-shell py-24">
